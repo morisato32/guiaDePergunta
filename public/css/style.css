@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body,html{
+    height: 100%;
+}
+
+body{
+    background-color: #eceff1;
+}
+
+div.container{
+    margin-top: 40px;
+}
+.navbar-brand >img{
+    padding-left: 200px;
+}
