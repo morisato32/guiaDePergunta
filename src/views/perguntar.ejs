@@ -12,11 +12,11 @@
             <div class="card-body">
                 <form action="/salvarpergunta" method="POST">
                     <label for="titulo">Título</label>
-                    <input class="form-control" type="text" id="titulo" placeholder="título" name="titulo">
+                    <input class="form-control" type="text" id="titulo" placeholder="título" name="titulo" required maxlength="50" minlength="4">
 
-                    <br><label for="titulo">Descrição</label>
-                    <textarea class="form-control" name="Descricao" id="titulo" cols="30" rows="10"
-                        placeholder="descreva sua pergunta"></textarea>
+                    <br><label for="Descricao">Descrição</label>
+                    <textarea class="form-control" name="Descricao" id="Descricao" cols="30" rows="10"
+                        placeholder="descreva sua pergunta" required minlength="10"></textarea>
                     <br>
                     <button class="btn btn-primary">perguntar</button>
                 </form>

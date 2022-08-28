@@ -4,24 +4,27 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const connection = require('./database/database')
 //database
-/*connection erro DIz que não é uma função!!
+connection 
     .authenticate()
     .then(()=>{
         console.log("conexão feita com sucesso!")
     })
-    .cath((msgErro) =>{
+    .catch((msgErro) =>{
         console.log(msgErro)
-    })*/
-const routerIndex = require('./rotas/routerIndex')
-const routerPerguntar = require('./rotas/routerPerguntar')
+    })
+
+const routerPerguntar = require('./rotas/routerPerguntar');
+const routerSalvarPergunta = require('./rotas/routersalvarPergunta');
+
 
 app.set('view engine','ejs');
 app.set('views','./src/views');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:false})) // pega os dados enviados pelo usuario e transforma em uma estrutura javascripts
 app.use(bodyParser.json()); // arquivos em formato json
-app.use('/',routerIndex);
 app.use('/perguntar',routerPerguntar);
+app.use('/salvarpergunta',routerSalvarPergunta);
+
 
 app.listen(4000,(error) =>{
     if(error){
