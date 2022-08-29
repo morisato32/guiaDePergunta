@@ -14,13 +14,14 @@ connection
     .catch((msgErro) =>{
         console.log(msgErro)
     })
-
+// rotas
 const routerPerguntar = require('./rotas/routerPerguntar');
 const routerSalvarPergunta = require('./rotas/routersalvarPergunta');
 const routerIndex = require('./rotas/routerIndex');
+const routerPerguntaId = require('./rotas/routerPerguntaId');
 
 
-
+// engine ejs
 app.set('view engine','ejs');
 app.set('views','./src/views');
 app.use(express.static('public'));
@@ -29,9 +30,12 @@ app.use(express.static('public'));
 //app.use (express.json())
 app.use(bodyParser.urlencoded({extended:false})) // pega os dados enviados pelo usuario e transforma em uma estrutura javascripts
 app.use(bodyParser.json()); // arquivos em formato json
+
+// usando as rotas
 app.use('/perguntar',routerPerguntar);
 app.use('/salvarpergunta',routerSalvarPergunta);
 app.use('/',routerIndex);
+app.use('/pergunta/:id',routerPerguntaId);
 
 
 app.listen(4000,(error) =>{

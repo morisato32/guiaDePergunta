@@ -14,6 +14,28 @@ body{
 div.container{
     margin-top: 40px;
 }
+div {
+    text-align: center;
+    margin-bottom: 2vh;
+}
 .navbar-brand >img{
     padding-left: 200px;
+}
+h1{
+    text-align: center;
+    margin-bottom: 5vh;
+    background-color: #007bff;
+    color:white;
+    padding: 1vh;
+}
+div.card-body,div.card-footer{
+    text-align: center;
+}
+div.card-header{
+    text-align: center;
+    background-color: #007bff;
+    color:white;
+}
+label{
+    text-align: right;
 }
