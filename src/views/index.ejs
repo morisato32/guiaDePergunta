@@ -1,7 +1,11 @@
 <%- include ('./partiels/header.ejs') %>
 <body>
     <%- include ('./partiels/navbar.ejs') %>
-    <h1>Guia De Perguntas</h1>
+    <div class="container">
+        <% perguntas.forEach(pergunta =>{%>
+            <p><%= pergunta.titulo%></p>
+        <%})%>
+    </div>
     <hr>
     <h2>Perguntas</h2>
 </body>
