@@ -4,6 +4,6 @@ const router = express.Router();
 
 
 
-router.get('/',perguntaIdController.perguntaId);
+router.get('/:id',perguntaIdController.perguntaId);
 
 module.exports = router;

@@ -32,10 +32,11 @@ app.use(bodyParser.urlencoded({extended:false})) // pega os dados enviados pelo 
 app.use(bodyParser.json()); // arquivos em formato json
 
 // usando as rotas
+app.use('/pergunta',routerPerguntaId);
 app.use('/perguntar',routerPerguntar);
 app.use('/salvarpergunta',routerSalvarPergunta);
 app.use('/',routerIndex);
-app.use('/pergunta/:id',routerPerguntaId);
+
 
 
 app.listen(4000,(error) =>{

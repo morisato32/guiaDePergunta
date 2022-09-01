@@ -12,8 +12,9 @@ const salvarPerguntaController ={
         }).then(() => {     // redireciona para a url raiz
             res.redirect('/')
         })
-    }
+    },
 }
+
 
 
 module.exports = salvarPerguntaController;
