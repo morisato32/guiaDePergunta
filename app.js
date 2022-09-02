@@ -16,9 +16,7 @@ connection
     })
 // rotas
 const routerPerguntar = require('./rotas/routerPerguntar');
-const routerSalvarPergunta = require('./rotas/routersalvarPergunta');
 const routerIndex = require('./rotas/routerIndex');
-const routerPerguntaId = require('./rotas/routerPerguntaId');
 
 
 // engine ejs
@@ -32,11 +30,10 @@ app.use(bodyParser.urlencoded({extended:false})) // pega os dados enviados pelo 
 app.use(bodyParser.json()); // arquivos em formato json
 
 // usando as rotas
-app.use('/pergunta',routerPerguntaId);
 app.use('/perguntar',routerPerguntar);
-app.use('/salvarpergunta',routerSalvarPergunta);
+app.use('/salvarpergunta',routerPerguntar);
 app.use('/',routerIndex);
-
+app.use('/pergunta',routerPerguntar);
 
 
 app.listen(4000,(error) =>{
