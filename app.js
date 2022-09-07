@@ -3,7 +3,7 @@ const app = express();
 const router = express.Router();
 const bodyParser = require('body-parser');
 const connection = require('./database/database')
-const pergunta = require('./database/Pergunta');
+
 
 //database
 connection 
@@ -34,6 +34,9 @@ app.use('/perguntar',routerPerguntar);
 app.use('/salvarpergunta',routerPerguntar);
 app.use('/',routerIndex);
 app.use('/pergunta',routerPerguntar);
+app.use((req,res,next) =>{
+    res.status(404).render("naoEncontrado")
+})
 
 
 app.listen(4000,(error) =>{

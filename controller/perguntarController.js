@@ -11,7 +11,9 @@ const perguntarController = {
           
           if (p != null) {
             //pergunta encontrada
-            res.render("pergunta");
+            res.render("pergunta",{
+              pergunta:pergunta
+            });
           } else {
             // não encontrada
             res.redirect("/");
@@ -30,9 +32,6 @@ const perguntarController = {
             res.redirect('/')
         })
     },
-
-
-   
 }
 
 module.exports = perguntarController;
