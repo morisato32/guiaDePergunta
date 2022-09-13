@@ -28,8 +28,10 @@ h1{
     color:white;
     padding: 1vh;
 }
+
 div.card-body,div.card-footer{
     text-align: center;
+   
 }
 div.card-header{
     text-align: center;

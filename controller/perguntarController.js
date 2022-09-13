@@ -11,9 +11,8 @@ const perguntarController = {
           
           if (p != null) {
             //pergunta encontrada
-            res.render("pergunta",{
-              pergunta:pergunta
-            });
+            res.render("pergunta",{p})
+           
           } else {
             // não encontrada
             res.redirect("/");
