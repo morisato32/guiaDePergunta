@@ -6,13 +6,25 @@
             <div class="card-body">
                 <h1><%= p.titulo %></h1>
             </div>
-            <form >
+            <form method="post" action="/resposta">
                 <label for="corpo"><h3>Resposta</h3></label>
                 <textarea name="corpo" id="corpo" placeholder="Digite sua resposta" class ="form-control"></textarea>
                 <br>
-                <input type="text" name="pergunta" value="<%= p.id %>">
+                <input type="hidden" name="pergunta" value="<%= p.id %>">
                 <button type ="submit" class="btn btn-primary">Enviar resposta</button>
             </form>
+            <br>
+            <h3>Respostas dos Usuarios</h3>
+           <br>
+            <% resposta.forEach(resposta =>{ %>
+             <div class="card">
+                <div class="card-body">
+                    <br><p><%= resposta.corpo %></p>
+                </div>
+                
+             </div>  
+         
+                <% }) %>
             
         </div>
         

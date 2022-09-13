@@ -8,4 +8,5 @@ router.get('/:id',perguntarController.perguntaId); // Faz referência a -> app.u
 router.post('/',perguntarController.salvarPergunta);//app.use('/salvarpergunta',routerPerguntar);
 
 
+
 module.exports = router;

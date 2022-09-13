@@ -19,6 +19,7 @@ connection
 // rotas
 const routerPerguntar = require('./rotas/routerPerguntar');
 const routerIndex = require('./rotas/routerIndex');
+const routerResposta = require('./rotas/routerResposta');
 
 
 // engine ejs
@@ -36,6 +37,7 @@ app.use('/perguntar',routerPerguntar);
 app.use('/salvarpergunta',routerPerguntar);
 app.use('/',routerIndex);
 app.use('/pergunta',routerPerguntar);
+app.use('/',routerResposta);
 app.use((req,res,next) =>{
     res.status(404).render("naoEncontrado")
 })
