@@ -1,0 +1,31 @@
+.navbar-brand >img{
+    padding-left: 200px;
+}
+
+div.card-header{
+    text-align: center;
+    background-color: #007bff;
+    color:white;
+    margin-top:20px
+}
+
+form{
+    text-align: center;
+    color:#fff;
+    background-color: #748396;
+    
+}
+h3{
+    text-align: center;
+    margin-top:20px;
+    background-color: #748396;
+    color:#fff;
+    padding: 20px;
+}
+textarea#corpo{
+    padding: 30px;
+}
+button.btn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

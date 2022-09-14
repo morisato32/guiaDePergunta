@@ -1,18 +1,22 @@
 <%- include ('./partiels/header.ejs') %>
 <body>
+    <link rel="stylesheet" href="/css/pergunta.css">
     <%- include ('./partiels/navbar.ejs') %>
     <div class="container">
         <div class="card">
-            <div class="card-body">
+            <div class="card-header">
                 <h1><%= p.titulo %></h1>
+                <h5><%= p.descricao %></h5>
             </div>
-            <form method="post" action="/resposta">
-                <label for="corpo"><h3>Resposta</h3></label>
-                <textarea name="corpo" id="corpo" placeholder="Digite sua resposta" class ="form-control"></textarea>
-                <br>
-                <input type="hidden" name="pergunta" value="<%= p.id %>">
-                <button type ="submit" class="btn btn-primary">Enviar resposta</button>
-            </form>
+            <div class="card-body">
+                <form method="post" action="/resposta">
+                    <label for="corpo"><h3>Resposta</h3></label>
+                    <textarea name="corpo" id="corpo" placeholder="Digite sua resposta" class ="form-control" required></textarea>
+                    <br>
+                    <input type="hidden" name="pergunta" value="<%= p.id %>">
+                    <button type ="submit" class="btn btn-primary">Enviar resposta</button>
+                </form>
+            </div>
             <br>
             <h3>Respostas dos Usuarios</h3>
            <br>

@@ -1,15 +1,17 @@
 *{
     margin:0;
     padding:0;
+    box-sizing: border-box;
+   
 }
 
 body,html{
     height: 100%;
 }
-
 body{
-    background-color: #eceff1;
+    text-align: center;
 }
+
 
 div.container{
     margin-top: 40px;
@@ -31,6 +33,8 @@ h1{
 
 div.card-body,div.card-footer{
     text-align: center;
+    background-color: rgb(116, 131, 150);
+    color:#fff
    
 }
 div.card-header{
